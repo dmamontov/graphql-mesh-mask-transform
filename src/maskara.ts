@@ -9,10 +9,9 @@ export interface Token {
 
 const tokens: Record<string | number, Token> = {
     0: { pattern: /\d/, _default: '0' },
-    9: { pattern: /\d/, optional: true },
     '#': { pattern: /\d/, optional: true, recursive: true },
     A: { pattern: /[a-zA-Z0-9]/ },
-    S: { pattern: /[a-zA-Z]/ },
+    S: { pattern: /.*/ },
     U: {
         pattern: /[a-zA-Z]/,
         transform: function (c: string) {
